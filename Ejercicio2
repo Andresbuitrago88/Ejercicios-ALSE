@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+    int numeros[5] = {3, -2, 7, 4, -1}; // Declaración del arreglo
+    int suma = 0;
+    
+    // Calcular la suma de los elementos del arreglo
+    for (int i = 0; i < 5; i++) {
+        suma += numeros[i];
+    }
+    
+    // Determinar si la suma es par o impar
+    bool esPar = (suma % 2 == 0);
+    bool esPositiva = (suma > 0);
+    
+    std::cout << "La suma de los elementos es: " << suma << "\n";
+    
+    if (esPar) {
+        std::cout << "La suma es par. ";
+    } else {
+        std::cout << "La suma es impar. ";
+    }
+    
+    if (esPositiva) {
+        std::cout << "Es positiva.\n";
+    } else if (suma < 0) {
+        std::cout << "Es negativa.\n";
+    } else {
+        std::cout << "Es cero.\n";
+    }
+    
+    return 0;
+}
